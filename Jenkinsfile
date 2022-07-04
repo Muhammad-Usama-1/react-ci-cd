@@ -12,7 +12,7 @@ pipeline {
     }
     stage('Build Docker Image') {         
       steps{                
-	sh 'docker build -f Dockerfile.prod  -t usama855/new:$BUILD_NUMBER .'           
+	sh 'docker build -f Dockerfile.prod -t sample:prod .'           
         echo 'Build Image Completed'                
       }           
     }
