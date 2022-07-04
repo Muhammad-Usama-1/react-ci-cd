@@ -12,7 +12,7 @@ pipeline {
     }
     stage('Build Docker Image') {         
       steps{                
-	sh 'docker build -f Dockerfile.prod -t usama855/new:$BUILD_NUMBER .'           
+	sh 'docker build -f Dockerfile.prod -t usama855/sample-prod:$BUILD_NUMBER .'           
         echo 'Build Image Completed'                
       }           
     }
@@ -24,7 +24,7 @@ pipeline {
     }               
     stage('Push Image to Docker Hub') {         
       steps{                            
-	sh 'docker push usama855/new:$BUILD_NUMBER'
+	sh 'docker push usama855/sample-prod:$BUILD_NUMBER'
         echo 'Push Image Completed'       
       }           
     }      
